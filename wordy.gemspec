@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Spencer Steffen"]
   s.email       = ["spencer@citrusme.com"]
   s.homepage    = "https://github.com/citrus/wordy"
-  s.summary     = %q{Wordy speaks lorem ipsum. You can ask wordy for a paragraphs, sentences or words.}
-  s.description = %q{Wordy speaks lorem ipsum. You can ask wordy for a paragraphs, sentences or words. Please see readme for more information.}
+  s.summary     = %q{Wordy speaks lorem ipsum. You can ask Wordy for a paragraphs, sentences or words.}
+  s.description = %q{Wordy speaks lorem ipsum. You can ask Wordy for a paragraphs, sentences or words. Please see readme for more information.}
 
   s.rubyforge_project = "wordy"
 

@@ -34,7 +34,7 @@ module Wordy
   end
   
   def words(length=nil)
-    length ||= rand(5)
+    length ||= 2 + rand(5)
     WORDS.shuffle.take(length)
   end
   
