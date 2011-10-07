@@ -57,7 +57,9 @@ Wordy has zero dependencies! All it requires is Ruby >= 1.9.
 Testing
 -------
 
-Testing is done with minitest. To run the tests, just run `rake`.
+Testing is done with minitest. Run the tests with:
+
+    ruby -Ilib -Itest test/test_wordy.rb
 
 
 License
