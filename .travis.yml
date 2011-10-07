@@ -1,7 +1,4 @@
 rvm:
   - 1.9.2
-  - rbx
-  - rbx-2.0
-  - jruby
 
 script: "ruby -Ilib -Itest test/test_wordy.rb"

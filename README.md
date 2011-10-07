@@ -1,5 +1,4 @@
-Wordy
-=====
+# Wordy [![Build Status](https://secure.travis-ci.org/citrus/wordy.png)](http://travis-ci.org/citrus/wordy)
 
 Wordy speaks lorem ipsum. You can ask Wordy for a paragraphs, sentences or words.
 
