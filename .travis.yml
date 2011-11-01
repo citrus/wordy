@@ -1,4 +1,5 @@
 rvm:
   - 1.9.2
+  - 1.9.3
 
 script: "ruby -Ilib -Itest test/test_wordy.rb"
