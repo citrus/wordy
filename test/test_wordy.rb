@@ -23,12 +23,20 @@ class TestWordy < MiniTest::Unit::TestCase
     assert 1 < Wordy.word.length
   end
   
+  def test_single_word_is_random
+    assert Wordy.word != Wordy.word
+  end
+  
   def test_words
     assert_equal Array, Wordy.words.class
   end
   
   def test_words_contain_strings
     assert_equal String, Wordy.words.first.class
+  end
+  
+  def test_words_are_random
+    assert Wordy.words != Wordy.words
   end
 
   def test_sentence
@@ -38,7 +46,11 @@ class TestWordy < MiniTest::Unit::TestCase
   def test_sentence_has_length
     assert 5 < Wordy.sentence.length
   end
-
+  
+  def test_sentence_is_random
+    assert Wordy.sentence != Wordy.sentence
+  end
+  
   def test_sentences
     assert_equal Array, Wordy.sentences.class
   end
@@ -47,8 +59,16 @@ class TestWordy < MiniTest::Unit::TestCase
     assert_equal String, Wordy.sentences.first.class
   end
   
+  def test_sentences_are_random
+    assert Wordy.sentences != Wordy.sentences
+  end
+  
   def test_paragraph
     assert_match /^([A-Z][a-z\s]+\.\s?){2,}$/, Wordy.paragraph
+  end
+  
+  def test_paragraph_is_random
+    assert Wordy.paragraph != Wordy.paragraph
   end
   
   def test_paragraphs
@@ -59,8 +79,16 @@ class TestWordy < MiniTest::Unit::TestCase
     assert_equal String, Wordy.paragraphs.first.class
   end
   
+  def test_paragraphs_are_random
+    assert Wordy.paragraphs != Wordy.paragraphs
+  end
+  
   def test_body
     assert_match /^([A-Z][a-z\s]+\.\s?){2,}$/, Wordy.body
+  end
+  
+  def test_body_is_random
+    assert Wordy.body != Wordy.body
   end
   
 end
