@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Spencer Steffen"]
   s.email       = ["spencer@citrusme.com"]
   s.homepage    = "https://github.com/citrus/wordy"
-  s.summary     = %q{Wordy speaks lorem ipsum. You can ask Wordy for a paragraphs, sentences or words.}
-  s.description = %q{Wordy speaks lorem ipsum. You can ask Wordy for a paragraphs, sentences or words. Please see readme for more information.}
+  s.summary     = %q{Wordy speaks lorem ipsum. You can ask Wordy for paragraphs, sentences or words.}
+  s.description = %q{Wordy speaks lorem ipsum. You can ask Wordy for paragraphs, sentences or words. Please see readme for more information.}
 
   s.rubyforge_project = "wordy"
 
@@ -21,4 +21,7 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
+  s.add_development_dependency("bundler", ">= 0")
+  s.add_development_dependency("rake",    ">= 0")
+  
 end
