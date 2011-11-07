@@ -2,6 +2,8 @@ require 'minitest/autorun'
 require 'wordy'
 
 class TestWordy < MiniTest::Unit::TestCase
+  
+  BIN = File.expand_path("../../bin/wordy", __FILE__)
 
   def test_has_version
     assert_equal String, Wordy::VERSION.class
@@ -89,6 +91,28 @@ class TestWordy < MiniTest::Unit::TestCase
   
   def test_body_is_random
     assert Wordy.body != Wordy.body
+  end
+  
+  def test_executable_exists
+    assert File.exists?(BIN)
+  end
+  
+  def test_executable_is_executable
+    assert File.executable?(BIN)
+  end
+  
+  def test_executable_rejects_non_methods
+    %w(wordy werd poem).each do |m|
+      out = `#{BIN} #{m}`
+      assert out.match(/Wordy does not know/)
+    end
+  end
+  
+  def test_executable_responds_to_methods
+    %w(word words sentence sentences paragraph paragraphs body).each do |m|
+      out = `#{BIN} #{m}`
+      assert out.match(/Wordy does not know/).nil?      
+    end
   end
   
 end

@@ -1,0 +1,12 @@
+#! /usr/bin/env ruby
+# encoding: UTF-8
+
+require "wordy"
+
+m = ARGV.shift
+if m && Wordy.respond_to?(m)
+  puts Wordy.send(m)
+else
+  puts "Wordy does not know #{m.inspect}. Please try one of the following..."
+  puts "=> word words sentence sentences paragraph paragraphs body"
+end
