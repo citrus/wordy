@@ -101,6 +101,16 @@ class TestWordy < MiniTest::Unit::TestCase
     assert File.executable?(BIN)
   end
   
+  def test_executable_returns_version
+    out = `#{BIN} -v`
+    assert_match "Wordy v#{Wordy::VERSION}", out
+  end
+  
+  def test_executable_defaults_to_body
+    out = `#{BIN}`
+    assert_match /^([A-Z][a-z\s]+\.\s?){2,}$/, out
+  end
+  
   def test_executable_rejects_non_methods
     %w(wordy werd poem).each do |m|
       out = `#{BIN} #{m}`

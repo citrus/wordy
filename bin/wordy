@@ -3,9 +3,11 @@
 
 require "wordy"
 
-m = ARGV.shift
+m = ARGV.shift || "body"
 if m && Wordy.respond_to?(m)
   puts Wordy.send(m)
+elsif m == "-v"
+  puts "Wordy v#{Wordy::VERSION}"
 else
   puts "Wordy does not know #{m.inspect}. Please try one of the following..."
   puts "=> word words sentence sentences paragraph paragraphs body"
