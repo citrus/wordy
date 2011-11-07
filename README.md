@@ -14,6 +14,8 @@ Usage
 
 Using wordy is easy. Here's the rundown in [irb](http://en.wikipedia.org/wiki/Interactive_Ruby_Shell):
 
+    # irb
+    
     $ require 'wordy'
      => true 
 
@@ -39,6 +41,17 @@ Using wordy is easy. Here's the rundown in [irb](http://en.wikipedia.org/wiki/In
      => "Aperiam ea voluptatem nostrum qui fuga et molestias quibusdam consequuntur non sed qui culpa. Incidunt minima similique repellendus distinctio debitis blanditiis ratione architecto.\n\nAliquid non excepturi voluptatem nobis laudantium. Corrupti ut aut autem sed quia ducimus eligendi eum maxime voluptas suscipit.\n\nDolor fuga est voluptas cupiditate vel quaerat consequuntur velit corrupti. Unde quod quia est nihil est nisi quo officiis nobis. Est similique ea dolorum natus. Odio voluptate facere cupiditate quo autem quod doloremque expedita delectus cum accusamus consequuntur ut.\n\nDignissimos quia blanditiis sit quis voluptates et optio maiores tenetur quia. Non aperiam quos eligendi voluptas est animi voluptatum sequi impedit. Impedit repudiandae officiis magni quia qui explicabo voluptas saepe delectus illo aliquid qui. Sunt minus sint quam omnis sed blanditiis." 
 
 
+New in version 1.1.0 is the wordy executable. Now you can get wordy from the command line.
+
+    # bash
+
+    $ wordy word
+    omnis
+    
+    $ wordy sentence
+    Sunt vel quia delectus perferendis fugiat et quis fuga maxime magnam.
+
+    
 That's it!
 
 
@@ -111,7 +124,7 @@ As usual, just use the `gem install` command:
     
 Or add wordy as a gem in your Gemfile:
 
-    gem 'wordy', '~> 0.2.0' 
+    gem 'wordy', '~> 1.1.0' 
 
 Then run `bundle install`
 
